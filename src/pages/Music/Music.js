@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Music.module.css";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 import melimosa from "../../images/artwork/melimosa.jpg";
 function Music() {
   const allAudio = [melimosa, melimosa, melimosa];
@@ -8,11 +9,7 @@ function Music() {
     <div className={styles.music}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Musical Compositions</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={styles.allSongs}>
         {allAudio.map((image) => {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Education.module.css";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 function Education() {
   const institutions = ["Bellevue University", "FreeCodeCamp", "CodeCademy"];
   const certifications = [
@@ -17,11 +18,7 @@ function Education() {
     <div className={styles.education}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Educational Background</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={[styles.allEducation, "row"].join(" ")}>
         {institutions.map((item, i) => {

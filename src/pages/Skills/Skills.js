@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Skills.module.css";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 function Skills() {
   const categories = ["Language", "Program", "IDE/CMS"];
   const fields = [
@@ -17,11 +18,7 @@ function Skills() {
     <div className={styles.skills}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Skill Set</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={[styles.allSkills, "row"].join(" ")}>
         {categories.map((item, i) => {

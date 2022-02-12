@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Games.module.css";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 import melimosa from "../../images/artwork/melimosa.jpg";
 
 function Games() {
@@ -9,11 +10,7 @@ function Games() {
     <div className={styles.games}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Games</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={styles.allGames}>
         {allImages.map((image) => {

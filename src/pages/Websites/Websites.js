@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Websites.module.css";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 import kl from "../../images/me-icon-circle.png";
 import raw from "../../images/me-icon-circle.png";
 import gj from "../../images/me-icon-circle.png";
@@ -41,11 +42,7 @@ function Websites() {
     <div className={styles.websites}>
       <div className={styles.intro}>
         <h1 className={styles.title}>My work so far</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={[styles.allSites, "row"].join(" ")}>
         {siteList.map((site) => {

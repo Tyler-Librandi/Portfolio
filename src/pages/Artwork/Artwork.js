@@ -14,6 +14,7 @@ import splashGreen from "../../images/artwork/splashGreen.jpg";
 import tl from "../../images/artwork/tl.jpg";
 import tripFrog from "../../images/artwork/tripFrog.jpg";
 import virus from "../../images/artwork/virus.jpg";
+import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 
 function Artwork() {
   const allImages = [
@@ -49,11 +50,7 @@ function Artwork() {
     <div className={styles.artwork}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Artwork</h1>
-        <div className={styles.link}>
-          <Link className={styles.backBtn} to={"/"}>
-            Return to Home
-          </Link>
-        </div>
+        <BackButtonComponent />
       </div>
       <div className={styles.allArt}>
         {allImages.map((image, key) => {

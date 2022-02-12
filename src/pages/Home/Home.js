@@ -130,7 +130,7 @@ function Home() {
               return (
                 <div key={item.key} className={styles.linkBox}>
                   <Link
-                    to={"/" + item.key}
+                    to={"/" + item.key + "/"}
                     className={styles.link}
                     onMouseEnter={() => changeIntro(item)}
                   >

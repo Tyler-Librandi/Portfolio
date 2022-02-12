@@ -43,29 +43,6 @@
   gap: 20px;
 }
 
-.link .backBtn {
-  color: black;
-  text-decoration: none;
-  font-size: 1vw;
-  background-color: #b3dff5;
-  padding: 10px 20px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-
-.link .backBtn:hover {
-  text-decoration: none;
-  color: red; /* make same color as websites home link icon */
-  background-color: white;
-  transition: 300ms;
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -ms-transition: 300ms;
-  -o-transition: 300ms;
-}
 .title {
   color: white;
   font-size: 4vh;
@@ -79,9 +56,6 @@
   gap: 50px;
   flex-basis: 20%;
   padding: 5%;
-}
-
-.artBox {
 }
 
 .art {
