@@ -16,7 +16,7 @@
     "react-transition-group": "^4.4.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://tyler-librandi.github.io/",
+  "homepage": "https://tyler-librandi.github.io/new-portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
