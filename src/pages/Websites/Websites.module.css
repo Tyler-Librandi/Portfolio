@@ -1,0 +1,128 @@
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swoopIn {
+  0% {
+    transform: translate(0px, -1500px);
+    -webkit-transform: translate(0px, -1500px);
+    -moz-transform: translate(0px, -1500px);
+    -ms-transform: translate(0px, -1500px);
+    -o-transform: translate(0px, -1500px);
+  }
+  100% {
+  }
+}
+
+.websites {
+  animation-name: fadeIn, swoopIn;
+  animation-duration: 0.25s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.intro {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link .backBtn {
+  color: black;
+  text-decoration: none;
+  font-size: 1vw;
+  background-color: #b3dff5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.link .backBtn:hover {
+  text-decoration: none;
+  color: red; /* make same color as websites home link icon */
+  background-color: white;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.title {
+  color: white;
+  font-size: 4vh;
+}
+
+.allSites {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.allSites .siteBox:nth-child(odd) {
+  background-color: rgb(0, 50, 90);
+}
+
+.allSites .siteBox:nth-child(even) {
+  background-color: rgb(0, 69, 158);
+}
+
+.siteBox {
+  padding: 2%;
+  margin: 0;
+  border: 1px solid rgb(15, 15, 15);
+  text-align: center;
+  color: white;
+  min-height: 500px;
+}
+
+.siteTitle {
+  font-size: 3vh;
+}
+
+.siteImage {
+  padding: 10% 0;
+  width: 10vw;
+}
+
+.siteDescription {
+  font-size: 2vh;
+  padding-bottom: 10%;
+}
+
+.siteAddress {
+  text-decoration: none;
+  color: white;
+  font-size: 2vh;
+  background-color: rgb(112, 112, 112);
+  padding: 10px 20px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.siteAddress:hover {
+  background-color: rgb(0, 153, 255);
+  color: white;
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -ms-transition: 0.25s;
+  -o-transition: 0.25s;
+}

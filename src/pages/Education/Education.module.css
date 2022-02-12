@@ -1,0 +1,131 @@
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swoopIn {
+  0% {
+    transform: translate(500px, -1500px);
+    -webkit-transform: translate(500px, -1500px);
+    -moz-transform: translate(500px, -1500px);
+    -ms-transform: translate(500px, -1500px);
+    -o-transform: translate(500px, -1500px);
+  }
+  100% {
+  }
+}
+
+.education {
+  animation-name: fadeIn, swoopIn;
+  animation-duration: 0.25s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.intro {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link .backBtn {
+  color: black;
+  text-decoration: none;
+  font-size: 1vw;
+  background-color: #b3dff5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.link .backBtn:hover {
+  text-decoration: none;
+  color: red; /* make same color as websites home link icon */
+  background-color: white;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.title {
+  color: white;
+  font-size: 4vh;
+}
+
+.allEducation {
+  color: white;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.institutionBox {
+  padding: 5%;
+  margin: 0;
+  box-shadow: 0px 0px 7.5px 5px rgba(0, 0, 0, 0.5);
+}
+.institutionBox:hover {
+  z-index: 10;
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.institutionBox:nth-child(1) {
+  position: relative;
+  bottom: -2.5vh;
+  left: 2.5vw;
+  background-color: rgb(90, 160, 255);
+}
+
+.institutionBox:nth-child(2) {
+  position: relative;
+  background-color: rgb(45, 115, 195);
+}
+
+.institutionBox:nth-child(3) {
+  position: relative;
+  bottom: 2.5vh;
+  right: 2.5vw;
+  background-color: rgb(0, 70, 135);
+}
+
+.institution {
+  padding-bottom: 15%;
+}
+
+.certification {
+  font-size: 2vh;
+}
+
+@media (max-width: 992px) {
+  .institutionBox:nth-child(1) {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(90, 160, 255);
+  }
+  .institutionBox:nth-child(3) {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(0, 70, 135);
+    margin: 0 auto;
+  }
+}

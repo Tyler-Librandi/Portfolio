@@ -1,0 +1,100 @@
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swoopIn {
+  0% {
+    transform: translate(500px, 1500px);
+    -webkit-transform: translate(500px, 1500px);
+    -moz-transform: translate(500px, 1500px);
+    -ms-transform: translate(500px, 1500px);
+    -o-transform: translate(500px, 1500px);
+  }
+  100% {
+  }
+}
+
+.music {
+  animation-name: fadeIn, swoopIn;
+  animation-duration: 0.25s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.intro {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link .backBtn {
+  color: black;
+  text-decoration: none;
+  font-size: 1vw;
+  background-color: #b3dff5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.link .backBtn:hover {
+  text-decoration: none;
+  color: red; /* make same color as websites home link icon */
+  background-color: white;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.title {
+  color: white;
+  font-size: 4vh;
+}
+
+.allSongs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  flex-basis: 20%;
+}
+
+.songBox {
+  max-width: 500px;
+}
+
+.song {
+  max-width: 500px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.song:hover {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  transform: scale(105%);
+  -webkit-transform: scale(105%);
+  -moz-transform: scale(105%);
+  -ms-transform: scale(105%);
+  -o-transform: scale(105%);
+}
