@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/new-portfolio/static/css/main.b6db103d.css",
-    "main.js": "/new-portfolio/static/js/main.42d58605.js",
+    "main.js": "/new-portfolio/static/js/main.4bf4f0f5.js",
     "static/media/virus.jpg": "/new-portfolio/static/media/virus.3bdeb554fad0f1920e56.jpg",
     "static/media/tl.jpg": "/new-portfolio/static/media/tl.d2c2876137c24480b32a.jpg",
     "static/media/pytp.jpg": "/new-portfolio/static/media/pytp.ddcd348d4628805f77c1.jpg",
@@ -21,10 +21,10 @@
     "static/media/troll-witch-2.jpg": "/new-portfolio/static/media/troll-witch-2.10f70cf447438eee9b25.jpg",
     "index.html": "/new-portfolio/index.html",
     "main.b6db103d.css.map": "/new-portfolio/static/css/main.b6db103d.css.map",
-    "main.42d58605.js.map": "/new-portfolio/static/js/main.42d58605.js.map"
+    "main.4bf4f0f5.js.map": "/new-portfolio/static/js/main.4bf4f0f5.js.map"
   },
   "entrypoints": [
     "static/css/main.b6db103d.css",
-    "static/js/main.42d58605.js"
+    "static/js/main.4bf4f0f5.js"
   ]
 }
