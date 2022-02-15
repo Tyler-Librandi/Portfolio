@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Artwork.module.css";
 import { useState } from "react";
 import couple from "../../images/artwork/couple.jpg";
@@ -20,59 +19,63 @@ function Artwork() {
   const allImages = [
     couple,
     faces,
-    mandala,
-    melimosa,
-    openMyTab,
-    pytp,
-    skull,
-    splashBlue,
-    splashRed,
-    splashGreen,
-    tl,
     tripFrog,
+    splashBlue,
+    splashGreen,
+    splashRed,
+    mandala,
     virus,
+    skull,
+    tl,
+    melimosa,
+    pytp,
+    openMyTab,
   ];
 
   const [showModal, setShowModal] = useState(false);
   const [modalImg, setModalImg] = useState("");
+
   const showImage = (image) => {
     setModalImg(image);
     setShowModal(true);
-    console.log("imaged");
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflowY = "hidden";
   };
   const hideModal = () => {
     setShowModal(false);
-    // document.body.style.overflow = "visible";
+    document.body.style.overflowY = "";
   };
 
   return (
-    <div className={styles.artwork}>
-      <div className={styles.intro}>
-        <h1 className={styles.title}>Artwork</h1>
-        <BackButtonComponent />
+    <div>
+      <div className={styles.artwork}>
+        <div className={styles.intro}>
+          <h1 className={styles.title}>Artwork</h1>
+          <BackButtonComponent />
+        </div>
+        <div className={styles.allArt}>
+          {allImages.map((image, key) => {
+            return (
+              <div className={styles.artBox} key={image}>
+                <img
+                  className={styles.art}
+                  src={image}
+                  alt=""
+                  onClick={() => {
+                    showImage(image);
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div className={styles.allArt}>
-        {allImages.map((image, key) => {
-          return (
-            <div className={styles.artBox} key={image}>
-              <img
-                className={styles.art}
-                src={image}
-                alt=""
-                onClick={() => showImage(image)}
-              />{" "}
-              {showModal ? (
-                <div className={styles.modal} onClick={hideModal}>
-                  <img className={styles.modalImage} src={modalImg} alt="" />
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-          );
-        })}
-      </div>
+      {showModal ? (
+        <div className={styles.modal} onClick={hideModal}>
+          <img className={styles.modalImage} src={modalImg} alt="" />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

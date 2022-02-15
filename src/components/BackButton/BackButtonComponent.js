@@ -6,7 +6,7 @@ function BackButtonComponent() {
   return (
     <div className={styles.link}>
       <Link className={styles.backBtn} to={"/new-portfolio/"}>
-        Return to Home
+        Back
       </Link>
     </div>
   );

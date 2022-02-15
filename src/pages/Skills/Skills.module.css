@@ -11,11 +11,11 @@
 
 @keyframes swoopIn {
   0% {
-    transform: translate(-500px, -1500px);
-    -webkit-transform: translate(-500px, -1500px);
-    -moz-transform: translate(-500px, -1500px);
-    -ms-transform: translate(-500px, -1500px);
-    -o-transform: translate(-500px, -1500px);
+    transform: translate(-1500px, 0px);
+    -webkit-transform: translate(-1500px, 0px);
+    -moz-transform: translate(-1500px, 0px);
+    -ms-transform: translate(-1500px, 0px);
+    -o-transform: translate(-1500px, 0px);
   }
   100% {
   }
@@ -31,6 +31,7 @@
 
 .intro {
   padding: 5%;
+  margin: 5vh 0px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -41,7 +42,8 @@
 
 .title {
   color: white;
-  font-size: 4vh;
+  font-size: 4em;
+  text-align: center;
 }
 
 .allSkills {
@@ -54,9 +56,13 @@
 }
 
 .skillBox {
-  padding: 5%;
+  padding: 50px;
   margin: 0;
   box-shadow: 0px 0px 7.5px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 .skillBox:hover {
   z-index: 10 !important;
@@ -68,13 +74,13 @@
   position: relative;
   top: -2.5vh;
   left: 2.5vw;
-  background-color: rgb(90, 160, 255);
+  background-color: #136ecf;
   z-index: 3;
 }
 
 .skillBox:nth-child(2) {
   position: relative;
-  background-color: rgb(45, 115, 195);
+  background-color: #0a5eb1;
   z-index: 2;
 }
 
@@ -82,16 +88,27 @@
   position: relative;
   top: 2.5vh;
   right: 2.5vw;
-  background-color: rgb(0, 70, 135);
+  background-color: #004d93;
   z-index: 1;
 }
 
 .skillCat {
-  padding-bottom: 15%;
+  font-size: 40px;
+  padding: 2.5% 5%;
+  margin-bottom: 5%;
+  border: 3px solid white;
+}
+
+.skillContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .skill {
-  font-size: 2vh;
+  font-size: 28px;
 }
 
 @media (max-width: 992px) {
@@ -99,13 +116,11 @@
     position: relative;
     top: 0px;
     left: 0px;
-    background-color: rgb(90, 160, 255);
   }
   .skillBox:nth-child(3) {
     position: relative;
     top: 0px;
     right: 0px;
-    background-color: rgb(0, 70, 135);
     margin: 0 auto;
   }
 }

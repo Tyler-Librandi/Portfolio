@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import { BsGlobe } from "react-icons/bs";
-import { IoIosMusicalNotes } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { IoGameController } from "react-icons/io5";
 import { GiGraduateCap, GiSkills, GiPaintBrush } from "react-icons/gi";
 import meImg from "../../images/me-icon-circle.png";
 import { useState } from "react";
@@ -15,7 +13,7 @@ function Home() {
     subtitle: "I build and design websites",
     description:
       "Click the icons to view my work, learn about my hobbies, or contact me",
-    backgroundColor: "transparent",
+    backgroundColor: "#3A3A3A",
   };
 
   const linksList = [
@@ -25,7 +23,7 @@ function Home() {
       subtitle: "Browse a portfolio of websites I've created",
       description:
         "I've recently started using React and I'm loving what I can do with it",
-      backgroundColor: "rgb(90, 160, 255)",
+      backgroundColor: "#136ecf",
       icon: <BsGlobe className={styles.linkIcon} />,
     },
     {
@@ -34,47 +32,32 @@ function Home() {
       subtitle: "Check out my educational background",
       description:
         "I believe that continuous learning is what keeps me growing as a developer",
-      backgroundColor: "rgb(75, 145, 235)",
+      backgroundColor: "#136ecf",
       icon: <GiGraduateCap className={styles.linkIcon} />,
-    },
-    {
-      key: "artwork",
-      title: "Artwork",
-      subtitle: "View some graphic art I've made in Photoshop",
-      description: "I tend to focus on abstract creations and website graphics",
-      backgroundColor: "rgb(60, 130, 215)",
-      icon: <GiPaintBrush className={styles.linkIcon} />,
-    },
-    {
-      key: "music",
-      title: "Music",
-      subtitle: "Hear a few songs I've made in FL Studio",
-      description: "This is more of a hobby of mine but I do have fun with it",
-      backgroundColor: "rgb(45, 115, 195)",
-      icon: <IoIosMusicalNotes className={styles.linkIcon} />,
     },
     {
       key: "contact",
       title: "Contact",
       subtitle: "Get in touch with me directly",
       description: "Hire me to work on your websites or at your company",
-      backgroundColor: "rgb(30, 100, 175)",
+      backgroundColor: "#136ecf",
       icon: <MdEmail className={styles.linkIcon} />,
     },
     {
-      key: "games",
-      title: "Games",
-      subtitle: "Play the games I've built",
-      description: "They're fun, easy, and built with React",
-      backgroundColor: "rgb(15, 85, 155)",
-      icon: <IoGameController className={styles.linkIcon} />,
+      key: "artwork",
+      title: "Artwork",
+      subtitle: "View some graphic art I've made in Photoshop",
+      description: "I tend to focus on abstract creations and website graphics",
+      backgroundColor: "#136ecf",
+      icon: <GiPaintBrush className={styles.linkIcon} />,
     },
+
     {
       key: "skills",
       title: "Skills",
       subtitle: "A list of skills I've developed over the years",
       description: "Everything from software to languages",
-      backgroundColor: "rgb(0, 70, 135)",
+      backgroundColor: "#136ecf",
       icon: <GiSkills className={styles.linkIcon} />,
     },
   ];
@@ -125,7 +108,7 @@ function Home() {
             src={meImg}
             onMouseEnter={() => changeIntro(initialIntro)}
           />
-          <div className={styles.allLinks}>
+          <div className={[styles.allLinks, "col"].join(" ")}>
             {linksList.map((item) => {
               return (
                 <div key={item.key} className={styles.linkBox}>
@@ -141,6 +124,11 @@ function Home() {
               );
             })}
           </div>
+          <img
+            className={[styles.meImgSml, "col"].join(" ")}
+            src={meImg}
+            onMouseEnter={() => changeIntro(initialIntro)}
+          />
         </div>
       </div>
     </div>

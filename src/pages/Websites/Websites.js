@@ -1,40 +1,37 @@
-import { Link } from "react-router-dom";
 import styles from "./Websites.module.css";
 import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
-import kl from "../../images/me-icon-circle.png";
-import raw from "../../images/me-icon-circle.png";
-import gj from "../../images/me-icon-circle.png";
-import rd from "../../images/me-icon-circle.png";
+import gjBg from "../../images/gaming-journal.jpg";
+import rdBg from "../../images/react.png";
 import klBg from "../../images/troll-witch-2.jpg";
-import rawBg from "../../images/header-bg.jpg";
+import rawBg from "../../images/rent-a-waitress.jpg";
 
 function Websites() {
   const siteList = [
     {
       title: "React Demo",
-      image: rd,
       description:
         "An interactive demonstration of skills I've acquired while learning React",
       address: "https://tyler-librandi.github.io/react-demo/",
+      background: rdBg,
     },
     {
       title: "Kurt Librandi",
-      image: kl,
       description:
         "A portfolio of artwork and sculptures made by Kurt Librandi",
       address: "https://kurtlibrandi.art/",
+      background: klBg,
     },
     {
       title: "Rent a Waitress",
-      image: raw,
       description: "A website for a local waitstaff business",
       address: "https://www.rent-a-waitress.com/",
+      background: rawBg,
     },
     {
       title: "Gaming Journal",
-      image: gj,
       description: "A blog dedicated to my gaming experiences",
       address: "https://gaming.tylerlibrandi.com/",
+      background: gjBg,
     },
   ];
 
@@ -59,18 +56,20 @@ function Websites() {
               style={{
                 backgroundImage: "url(" + site.background + ")",
                 backgroundSize: "cover",
+                backgroundPosition: "center top",
               }}
             >
-              <h2 className={styles.siteTitle}>{site.title}</h2>
-              <img src={site.image} alt="" className={styles.siteImage} />
-              <p className={styles.siteDescription}>{site.description}</p>
-              <a
-                className={styles.siteAddress}
-                href={site.address}
-                target="_blank"
-              >
-                Visit
-              </a>
+              <div className={styles.siteContent}>
+                <h2 className={styles.siteTitle}>{site.title}</h2>
+                <p className={styles.siteDescription}>{site.description}</p>
+                <a
+                  className={styles.siteAddress}
+                  href={site.address}
+                  target="_blank"
+                >
+                  Visit
+                </a>
+              </div>
             </div>
           );
         })}

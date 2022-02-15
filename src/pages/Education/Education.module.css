@@ -11,11 +11,11 @@
 
 @keyframes swoopIn {
   0% {
-    transform: translate(500px, -1500px);
-    -webkit-transform: translate(500px, -1500px);
-    -moz-transform: translate(500px, -1500px);
-    -ms-transform: translate(500px, -1500px);
-    -o-transform: translate(500px, -1500px);
+    transform: translate(1500px, 0px);
+    -webkit-transform: translate(1500px, 0px);
+    -moz-transform: translate(1500px, 0px);
+    -ms-transform: translate(1500px, 0px);
+    -o-transform: translate(1500px, 0px);
   }
   100% {
   }
@@ -31,6 +31,7 @@
 
 .intro {
   padding: 5%;
+  margin: 5vh 0px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -41,7 +42,8 @@
 
 .title {
   color: white;
-  font-size: 4vh;
+  font-size: 4em;
+  text-align: center;
 }
 
 .allEducation {
@@ -54,9 +56,13 @@
 }
 
 .institutionBox {
-  padding: 5%;
+  padding: 50px;
   margin: 0;
   box-shadow: 0px 0px 7.5px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 .institutionBox:hover {
   z-index: 10;
@@ -68,27 +74,38 @@
   position: relative;
   bottom: -2.5vh;
   left: 2.5vw;
-  background-color: rgb(90, 160, 255);
+  background-color: #004d93;
 }
 
 .institutionBox:nth-child(2) {
   position: relative;
-  background-color: rgb(45, 115, 195);
+  background-color: #0a5eb1;
 }
 
 .institutionBox:nth-child(3) {
   position: relative;
   bottom: 2.5vh;
   right: 2.5vw;
-  background-color: rgb(0, 70, 135);
+  background-color: #136ecf;
 }
 
 .institution {
-  padding-bottom: 15%;
+  font-size: 40px;
+  padding: 2.5% 5%;
+  margin-bottom: 5%;
+  border: 3px solid white;
+}
+
+.certContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .certification {
-  font-size: 2vh;
+  font-size: 28px;
 }
 
 @media (max-width: 992px) {
@@ -96,13 +113,11 @@
     position: relative;
     top: 0px;
     left: 0px;
-    background-color: rgb(90, 160, 255);
   }
   .institutionBox:nth-child(3) {
     position: relative;
     top: 0px;
     right: 0px;
-    background-color: rgb(0, 70, 135);
     margin: 0 auto;
   }
 }

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Skills.module.css";
 import BackButtonComponent from "../../components/BackButton/BackButtonComponent";
 function Skills() {
@@ -25,11 +24,18 @@ function Skills() {
           return (
             <div
               className={[styles.skillBox, "col-lg-4", "col-md-6"].join(" ")}
+              key={i}
             >
               <h2 className={styles.skillCat}>{item}</h2>
-              {fields[i].map((subitem) => {
-                return <p className={styles.skill}>{subitem}</p>;
-              })}
+              <div className={styles.skillContent}>
+                {fields[i].map((subitem, i) => {
+                  return (
+                    <p className={styles.skill} key={i}>
+                      {subitem}
+                    </p>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
