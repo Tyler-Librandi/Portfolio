@@ -4,6 +4,7 @@ import { BsGlobe } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { GiGraduateCap, GiSkills, GiPaintBrush } from "react-icons/gi";
 import meImg from "../../images/me-icon-circle.png";
+import meImgSml from "../../images/me-icon-circle-sml.png";
 import { useState } from "react";
 
 function Home() {
@@ -27,6 +28,14 @@ function Home() {
       icon: <BsGlobe className={styles.linkIcon} />,
     },
     {
+      key: "skills",
+      title: "Skills",
+      subtitle: "A list of skills I've developed over the years",
+      description: "Everything from software to languages",
+      backgroundColor: "#136ecf",
+      icon: <GiSkills className={styles.linkIcon} />,
+    },
+    {
       key: "education",
       title: "Education",
       subtitle: "Check out my educational background",
@@ -36,14 +45,6 @@ function Home() {
       icon: <GiGraduateCap className={styles.linkIcon} />,
     },
     {
-      key: "contact",
-      title: "Contact",
-      subtitle: "Get in touch with me directly",
-      description: "Hire me to work on your websites or at your company",
-      backgroundColor: "#136ecf",
-      icon: <MdEmail className={styles.linkIcon} />,
-    },
-    {
       key: "artwork",
       title: "Artwork",
       subtitle: "View some graphic art I've made in Photoshop",
@@ -51,14 +52,13 @@ function Home() {
       backgroundColor: "#136ecf",
       icon: <GiPaintBrush className={styles.linkIcon} />,
     },
-
     {
-      key: "skills",
-      title: "Skills",
-      subtitle: "A list of skills I've developed over the years",
-      description: "Everything from software to languages",
+      key: "contact",
+      title: "Contact",
+      subtitle: "Get in touch with me directly",
+      description: "Hire me to work on your websites or at your company",
       backgroundColor: "#136ecf",
-      icon: <GiSkills className={styles.linkIcon} />,
+      icon: <MdEmail className={styles.linkIcon} />,
     },
   ];
 
@@ -103,11 +103,13 @@ function Home() {
             " "
           )}
         >
-          <img
-            className={styles.meImg}
-            src={meImg}
-            onMouseEnter={() => changeIntro(initialIntro)}
-          />
+          <Link to={"/about/"} className={styles.aboutLink}>
+            <img
+              className={styles.meImg}
+              src={meImg}
+              onMouseEnter={() => changeIntro(initialIntro)}
+            />
+          </Link>
           <div className={[styles.allLinks, "col"].join(" ")}>
             {linksList.map((item) => {
               return (
@@ -124,11 +126,13 @@ function Home() {
               );
             })}
           </div>
-          <img
-            className={[styles.meImgSml, "col"].join(" ")}
-            src={meImg}
-            onMouseEnter={() => changeIntro(initialIntro)}
-          />
+          <Link to={"/about/"} className={styles.aboutLinkSml}>
+            <img
+              className={[styles.meImgSml, "col"].join(" ")}
+              src={meImgSml}
+              onMouseEnter={() => changeIntro(initialIntro)}
+            />
+          </Link>
         </div>
       </div>
     </div>

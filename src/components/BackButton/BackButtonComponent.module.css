@@ -2,8 +2,9 @@
   color: white;
   text-decoration: none;
   font-size: 24px;
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(83, 83, 83);
   padding: 10px 20px;
+  border: 2px solid white;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
