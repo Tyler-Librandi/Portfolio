@@ -31,19 +31,71 @@ import BackButtonComponent from "../../components/BackButton/BackButtonComponent
 
 function Artwork() {
   const allImages = [
-    { large: couple, small: coupleSml },
-    { large: faces, small: facesSml },
-    { large: tripFrog, small: tripFrogSml },
-    { large: splashBlue, small: splashBlueSml },
-    { large: splashGreen, small: splashGreenSml },
-    { large: splashRed, small: splashRedSml },
-    { large: mandala, small: mandalaSml },
-    { large: virus, small: virusSml },
-    { large: skull, small: skullSml },
-    { large: tl, small: tlSml },
-    { large: melimosa, small: melimosaSml },
-    { large: pytp, small: pytpSml },
-    { large: openMyTab, small: openMyTabSml },
+    {
+      large: couple,
+      small: coupleSml,
+      altText: "Abstract image of a man and a woman",
+    },
+    {
+      large: faces,
+      small: facesSml,
+      altText: "Abstract image of a face",
+    },
+    {
+      large: tripFrog,
+      small: tripFrogSml,
+      altText: "Abstract image of a frog",
+    },
+    {
+      large: splashBlue,
+      small: splashBlueSml,
+      altText: "A splash of blue paint",
+    },
+    {
+      large: splashGreen,
+      small: splashGreenSml,
+      altText: "A splash of green paint",
+    },
+    {
+      large: splashRed,
+      small: splashRedSml,
+      altText: "A splash of red paint",
+    },
+    {
+      large: mandala,
+      small: mandalaSml,
+      altText: "A swirled red mandala",
+    },
+    {
+      large: virus,
+      small: virusSml,
+      altText: "A patterned gradient",
+    },
+    {
+      large: skull,
+      small: skullSml,
+      altText: "A gradient skull",
+    },
+    {
+      large: tl,
+      small: tlSml,
+      altText: "Neon bar sign that says Tyler Librandi",
+    },
+    {
+      large: melimosa,
+      small: melimosaSml,
+      altText: "Graphic that says Melimosa, your awkward fashionista",
+    },
+    {
+      large: pytp,
+      small: pytpSml,
+      altText: "Neon bar sign that says Pull Yourself To Pieces",
+    },
+    {
+      large: openMyTab,
+      small: openMyTabSml,
+      altText: "Neon bar sign that says Open My Tab Podcast",
+    },
   ];
 
   const [showModal, setShowModal] = useState(false);
@@ -67,13 +119,13 @@ function Artwork() {
           <BackButtonComponent />
         </div>
         <div className={styles.allArt}>
-          {allImages.map((image, key) => {
+          {allImages.map((image) => {
             return (
-              <div className={styles.artBox} key={image}>
+              <div className={styles.artBox} key={image.large}>
                 <img
                   className={styles.art}
                   src={image.small}
-                  alt=""
+                  alt={image.altText}
                   onClick={() => {
                     showImage(image);
                   }}

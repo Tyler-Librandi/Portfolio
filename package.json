@@ -1,5 +1,5 @@
 {
-  "name": "new-portfolio",
+  "name": "tyler-librandi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "react-transition-group": "^4.4.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://tyler-librandi.github.io/new-portfolio/",
+  "homepage": "https://tylerlibrandi.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

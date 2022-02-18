@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function BackButtonComponent() {
   return (
     <div className={styles.link}>
-      <Link className={styles.backBtn} to={"/new-portfolio/"}>
+      <Link className={styles.backBtn} to={"/"}>
         Back
       </Link>
     </div>
