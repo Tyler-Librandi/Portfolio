@@ -11,7 +11,7 @@ function Websites() {
       title: "React Demo",
       description:
         "An interactive demonstration of skills I've acquired while learning React",
-      address: "https://tyler-librandi.github.io/react-demo/",
+      address: "https://react.tylerlibrandi.com/",
       background: rdBg,
     },
     {
